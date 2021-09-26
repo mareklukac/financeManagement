@@ -15,25 +15,33 @@ const options = [
 
 class FormTab extends Component {
   state = {
-    submittedTitle: "",
-    submittedAmount: "",
-    submittedAction: "",
-    submittedDate: "",
-    submittedAbout: "",
+    // submittedTitle: "",
+    // submittedAmount: "",
+    // submittedAction: "",
+    // submittedDate: "",
+    // submittedAbout: "",
+    title: "",
+    amount: "",
+    action: "",
+    date: "",
+    about: "",
   };
 
   handleChange = (e, { name, value }) => this.setState({ [name]: value });
 
   handleSubmit = () => {
-    const { title, amount, action, date, about } = this.state;
+    const balanceItem = {
+      title: this.state.title,
+      amount: +this.state.amount,
+      action: this.state.action,
+      date: this.state.date,
+      about: this.state.about,
+    };
+    console.log(balanceItem);
 
-    this.setState({
-      submittedTitle: title,
-      submittedAmount: amount,
-      submittedAction: action,
-      submittedDate: new Date().toDateString(),
-      submittedAbout: about,
-    });
+    this.props.onFormSubmit(balanceItem);
+
+    this.setState({ title: "", amount: "", action: "", date: "", about: "" });
   };
 
   render() {
@@ -67,6 +75,8 @@ class FormTab extends Component {
               <Form.Field
                 name="amount"
                 value={amount}
+                min="0.01"
+                step="0.01"
                 required
                 control={Input}
                 label="Amount"

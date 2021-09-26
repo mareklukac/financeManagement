@@ -1,26 +1,22 @@
 import React from "react";
-import { Container, Icon, Menu, Table } from "semantic-ui-react";
+import { Icon, Menu, Table } from "semantic-ui-react";
+import BalanceItem from "./BalanceItem";
 
 const BalanceTable = (props) => {
   return (
     // <Container>
     <Table fixed inverted striped color={props.color} key={props.color}>
       <Table.Body>
-        <Table.Row>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-        </Table.Row>
+        {props.items.map((item) => (
+          <BalanceItem
+            key={Math.random().toString()}
+            title={item.title}
+            amount={item.amount}
+            action={item.action}
+            date={item.date}
+            about={item.about}
+          />
+        ))}
       </Table.Body>
 
       <Table.Footer>
