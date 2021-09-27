@@ -9,4 +9,9 @@ html {
 body {
   margin: 0;
   background-color: #24272b;
+  height: 100%;
+}
+
+section {
+  height: 100vh;
 }

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import HeaderMenu from "./components/Header/HeaderMenu";
 import BalanceTab from "./components/Balance/BalanceTab";
 import FormTab from "./components/Form/FormTab";
+import ChartsTab from "./components/Infographic/ChartsTab";
+import BalanceProvider from "./components/store/BalanceProvider";
 
 const DUMMY_LIST = [
   {
@@ -44,11 +46,14 @@ function App() {
   };
 
   return (
-    <React.Fragment>
+    <BalanceProvider>
       <HeaderMenu />
-      <BalanceTab items={balanceList} />
-      <FormTab onFormSubmit={formSubmitHandler} />
-    </React.Fragment>
+      <main>
+        <BalanceTab items={balanceList} />
+        <FormTab onFormSubmit={formSubmitHandler} />
+        <ChartsTab />
+      </main>
+    </BalanceProvider>
   );
 }
 

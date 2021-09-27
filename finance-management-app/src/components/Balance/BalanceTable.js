@@ -1,5 +1,6 @@
 import React from "react";
-import { Icon, Menu, Table } from "semantic-ui-react";
+import { Table } from "semantic-ui-react";
+
 import BalanceItem from "./BalanceItem";
 
 const BalanceTable = (props) => {
@@ -19,7 +20,7 @@ const BalanceTable = (props) => {
         ))}
       </Table.Body>
 
-      <Table.Footer>
+      {/* <Table.Footer>
         <Table.Row>
           <Table.HeaderCell colSpan="3">
             <Menu floated="right" pagination>
@@ -36,7 +37,7 @@ const BalanceTable = (props) => {
             </Menu>
           </Table.HeaderCell>
         </Table.Row>
-      </Table.Footer>
+      </Table.Footer> */}
     </Table>
     // </Container>
   );

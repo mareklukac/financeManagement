@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Grid } from "semantic-ui-react";
+import BalanceContext from "../store/balance-context";
 
 import styles from "./Balance.module.css";
 
 const Balance = () => {
+  const balanceCtx = useContext(BalanceContext);
   return (
-    <section className={styles.balance}>
+    <div className={styles.balance}>
       <Grid>
         <Grid.Row>
           <Grid.Column textAlign="center">
@@ -16,13 +18,15 @@ const Balance = () => {
         <Grid.Row>
           <Grid.Column textAlign="center">
             <div className={styles["balance-number"]}>
-              <span className={styles["balance-number-num"]}>11 256,96</span>
+              <span className={styles["balance-number-num"]}>
+                {balanceCtx.totalBalance}
+              </span>
               <span className={styles["balance-number-currencies"]}>EUR</span>
             </div>
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </section>
+    </div>
   );
 };
 
