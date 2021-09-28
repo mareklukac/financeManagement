@@ -1,26 +1,26 @@
-import React from "react";
-import { Table } from "semantic-ui-react";
+import React from 'react';
+import { Table } from 'semantic-ui-react';
 
-import BalanceItem from "./BalanceItem";
+import BalanceItem from './BalanceItem';
 
-const BalanceTable = (props) => {
-  return (
-    // <Container>
-    <Table fixed inverted striped color={props.color} key={props.color}>
-      <Table.Body>
-        {props.items.map((item) => (
-          <BalanceItem
-            key={Math.random().toString()}
-            title={item.title}
-            amount={item.amount}
-            action={item.action}
-            date={item.date}
-            about={item.about}
-          />
-        ))}
-      </Table.Body>
+const BalanceTable = props => {
+	return (
+		// <Container>
+		<Table fixed inverted striped color={props.color} key={props.color}>
+			<Table.Body>
+				{/* {props.items.map((item) => ( */}
+				{/* <BalanceItem
+					key={Math.random().toString()}
+					title={item.title}
+					amount={item.amount}
+					action={item.action}
+					date={item.date}
+					about={item.about}
+				/> */}
+				{/* ))} */}
+			</Table.Body>
 
-      {/* <Table.Footer>
+			{/* <Table.Footer>
         <Table.Row>
           <Table.HeaderCell colSpan="3">
             <Menu floated="right" pagination>
@@ -38,9 +38,9 @@ const BalanceTable = (props) => {
           </Table.HeaderCell>
         </Table.Row>
       </Table.Footer> */}
-    </Table>
-    // </Container>
-  );
+		</Table>
+		// </Container>
+	);
 };
 
 export default BalanceTable;
