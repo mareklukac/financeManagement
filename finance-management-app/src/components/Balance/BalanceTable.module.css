@@ -1,0 +1,15 @@
+.tableItemGreen {
+  background-color: #4bb63852 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: bold;
+  font-size: 1.15rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tableItemRed {
+  background-color: #af2d2d4d !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: bold;
+  font-size: 1.15rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}

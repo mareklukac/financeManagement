@@ -4,8 +4,8 @@ const BalanceContext = React.createContext({
   totalBalance: 0,
   expensesItems: [],
   incomesItems: [],
-  totalExpenseAmount: 0,
-  totalIncomeAmount: 0,
+  totalExpensesAmount: 0,
+  totalIncomesAmount: 0,
   addItem: (item) => {},
   removeItem: (id) => {},
 });

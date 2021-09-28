@@ -1,0 +1,15 @@
+.formContainer {
+  background-color: #1b1c1d;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  border: #393b3d 2px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.formField:focus {
+  background-color: #d4e3f8e5 !important;
+}
+
+.formSection {
+  padding-top: 10rem;
+}

@@ -1,0 +1,31 @@
+.green-table,
+.red-table {
+  margin-top: 8rem;
+  height: 30rem;
+  max-height: 30rem;
+  padding: 0 !important;
+  overflow: auto;
+}
+
+.green-table {
+  background-color: #4bb63852;
+  max-width: 40rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: #52f5357c 2px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.red-table {
+  background-color: #af2d2d4d;
+  max-width: 40rem;
+  margin-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: #af2d2d7a 2px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.green-table::-webkit-scrollbar,
+.red-table::-webkit-scrollbar {
+  display: none;
+}
