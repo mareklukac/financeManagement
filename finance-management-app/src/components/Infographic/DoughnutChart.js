@@ -34,7 +34,7 @@ const DoughnutChart = (props) => {
           datasets: [
             {
               label: "# of Votes",
-              data: [props.incomeAmount, props.expenseAmount],
+              data: [15, 19],
               backgroundColor: [
                 "rgba(255, 99, 132, 1)",
                 "rgba(54, 255, 132, 1)",

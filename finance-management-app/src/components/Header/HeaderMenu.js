@@ -1,32 +1,59 @@
 import React, { Component } from "react";
 import { Menu } from "semantic-ui-react";
 
-export default class HeaderMenu extends Component {
-  state = {};
+import styles from "./HeaderMenu.module.css";
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+export default class HeaderMenu extends Component {
+  state = {
+    activeItem: "Balance",
+  };
+
+  handleItemClick = (e, { name }) => {
+    this.this.setState({ activeItem: name });
+  };
 
   render() {
     const { activeItem } = this.state;
 
     return (
-      <Menu inverted borderless size="huge">
+      <Menu inverted borderless size="huge" className={styles.sticky}>
         <Menu.Item header>Finance Management</Menu.Item>
         <Menu.Menu position="right">
           <Menu.Item
-            name="aboutUs"
-            active={activeItem === "aboutUs"}
-            onClick={this.handleItemClick}
+            name="Balance"
+            active={activeItem === "Balance"}
+            onClick={
+              (this.handleItemClick,
+              () => {
+                document
+                  .querySelector("#balance-tab-section")
+                  .scrollIntoView({ behavior: "smooth", block: "center" });
+              })
+            }
           />
           <Menu.Item
-            name="jobs"
-            active={activeItem === "jobs"}
-            onClick={this.handleItemClick}
+            name="Add Item"
+            active={activeItem === "Add Item"}
+            onClick={
+              (this.handleItemClick,
+              () => {
+                document
+                  .querySelector("#form-tab-section")
+                  .scrollIntoView({ behavior: "smooth", block: "center" });
+              })
+            }
           />
           <Menu.Item
-            name="locations"
-            active={activeItem === "locations"}
-            onClick={this.handleItemClick}
+            name="Infographic"
+            active={activeItem === "Infographic"}
+            onClick={
+              (this.handleItemClick,
+              () => {
+                document
+                  .querySelector("#charts-tab-section")
+                  .scrollIntoView({ behavior: "smooth", block: "center" });
+              })
+            }
           />
         </Menu.Menu>
       </Menu>

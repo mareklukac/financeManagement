@@ -1,0 +1,12 @@
+.balanceItem {
+  width: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.balanceItem:hover {
+  overflow: visible;
+  white-space: normal;
+}

@@ -8,7 +8,7 @@ const ChartsTab = () => {
   const incomeAmount = balanceCtx.totalIncomeAmount;
   const expenseAmount = balanceCtx.totalExpenseAmount;
   return (
-    <section>
+    <section id="charts-tab-section">
       <Container>
         <DoughnutChart
           incomeAmount={incomeAmount}
