@@ -73,7 +73,7 @@ const BalanceProvider = (props) => {
   };
 
   const balanceContext = {
-    totalBalance: itemsState.totalAmount,
+    totalBalance: itemsState.totalAmount.toFixed(2),
     expensesItems: itemsState.expensesItems,
     incomesItems: itemsState.incomesItems,
     totalExpensesAmount: itemsState.totalExpenseAmount,
